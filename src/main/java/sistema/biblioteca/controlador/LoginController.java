@@ -11,9 +11,6 @@ import javafx.scene.control.TextField;
 public class LoginController {
 
     @FXML
-    private Button btEntrar;
-
-    @FXML
     private PasswordField psenha;
     
     @FXML
@@ -25,7 +22,6 @@ public class LoginController {
         if(tlogin.getText().equalsIgnoreCase("admin")  && psenha.getText().equalsIgnoreCase("admin")){
             App.trocarLayout("menu.fxml");
         }
-        
     }
 
 }
