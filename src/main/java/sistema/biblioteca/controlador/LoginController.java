@@ -12,7 +12,7 @@ public class LoginController {
 
     @FXML
     private PasswordField psenha;
-    
+
     @FXML
     private TextField tlogin;
 

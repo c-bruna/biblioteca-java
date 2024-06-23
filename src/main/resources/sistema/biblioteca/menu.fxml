@@ -16,7 +16,7 @@
                   <Font name="Arial Black" size="18.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Adicionar Livro" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#trocarTelaAdicionarLivro" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Adicionar Livro" textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="10.0" top="20.0" />
                </VBox.margin>
@@ -26,7 +26,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Exibir Livros" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#trocarTelaExibirLivros" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Exibir Livros" textFill="WHITE" />
          </children>
       </VBox>
       <Label layoutX="264.0" layoutY="23.0" text="Menu">
@@ -51,7 +51,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Exibir Usuários" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#trocarTelaExibirUsuarios" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Exibir Usuários" textFill="WHITE" />
          </children>
       </VBox>
       <VBox alignment="TOP_CENTER" layoutX="400.0" layoutY="69.0" prefHeight="330.0" prefWidth="200.0">
@@ -61,7 +61,7 @@
                   <Font name="Arial Black" size="18.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Adicionar Empréstimo" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#trocarTelaAdicionarEmprestimo" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Adicionar Empréstimo" textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="10.0" top="20.0" />
                </VBox.margin>
@@ -71,7 +71,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Exibir Empréstimos" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#trocarTelaExibirEmprestimos" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Exibir Empréstimos" textFill="WHITE" />
          </children>
       </VBox>
    </children>
