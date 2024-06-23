@@ -1,4 +1,4 @@
-module exemplo.aula22 {
+module sistema.biblioteca {
     requires javafx.controls;
     requires javafx.fxml;
 
