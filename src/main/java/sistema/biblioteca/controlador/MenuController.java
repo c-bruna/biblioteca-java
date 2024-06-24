@@ -25,27 +25,38 @@ public class MenuController {
     }
 
     @FXML
+    private void trocarTelaDevolverEmprestimo() throws IOException {
+        App.trocarLayout("devolver_emprestimo.fxml");
+    }
+
+    @FXML
     private void trocarTelaRemoverUsuario() throws IOException {
-        App.trocarLayout("menu.fxml");
+        App.trocarLayout("remover_usuario.fxml");
     }
 
     @FXML
     private void trocarTelaRemoverLivro() throws IOException {
-        App.trocarLayout("menu.fxml");
+        App.trocarLayout("remover_livro.fxml");
     }
 
     @FXML
     private void trocarTelaExibirUsuarios() throws IOException {
-        App.trocarLayout("exibirUsuarios.fxml");
+        App.trocarLayout("exibir_usuarios.fxml");
     }
+
     @FXML
     private void trocarTelaExibirLivros() throws IOException {
-        App.trocarLayout("exibirLivros.fxml");
+        App.trocarLayout("exibir_livros.fxml");
     }
 
     @FXML
     private void trocarTelaExibirEmprestimos() throws IOException {
-        App.trocarLayout("exibirEmprestimos.fxml");
+        App.trocarLayout("exibir_emprestimos.fxml");
+    }
+
+    @FXML
+    private void trocarTelaMenu() throws IOException {
+        App.trocarLayout("exibir_emprestimos.fxml");
     }
 
     }

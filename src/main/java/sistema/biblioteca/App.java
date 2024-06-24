@@ -24,7 +24,6 @@ public class App extends Application {
         Parent root = FXMLLoader.load(App.class.getResource(menu));
         scene.setRoot(root);
     }
-
    
     public static void main(String[] args) {
         launch();

@@ -11,14 +11,14 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.UsuarioController">
     <children>
-        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: blue;">
+        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: #387296;">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" text="Cadastro do Estudante" textFill="WHITE">
                     <font>
                         <Font name="Lucida Sans Unicode" size="28.0" />
                     </font>
                     <HBox.margin>
-                        <Insets bottom="5.0" />
+                        <Insets top="10.0" />
                     </HBox.margin>
                 </Label>
             </children>
