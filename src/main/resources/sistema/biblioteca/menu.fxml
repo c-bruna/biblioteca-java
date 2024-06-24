@@ -10,21 +10,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.MenuController">
    <children>
-      <Label layoutX="156.0" layoutY="24.0" text="Menu do Bibliotecário">
-         <font>
-            <Font name="Arial Black" size="24.0" />
-         </font>
-      </Label>
-      <HBox alignment="CENTER" layoutY="73.0" prefHeight="322.0" prefWidth="600.0">
+      <HBox alignment="CENTER" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="640.0">
          <children>
-            <VBox alignment="TOP_CENTER" prefHeight="330.0" prefWidth="200.0">
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="213.0">
                <children>
-                  <Label alignment="TOP_CENTER" text="Usuários">
+                  <Label alignment="TOP_CENTER" prefWidth="87.0" text="Usuários">
                      <font>
                         <Font name="Arial Black" size="18.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
                   </Label>
                   <Button mnemonicParsing="false" onAction="#trocarTelaAdicionarUsuario" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Adicionar Usuário" textFill="WHITE">
                      <VBox.margin>
@@ -47,12 +45,15 @@
                   </ImageView>
                </children>
             </VBox>
-            <VBox alignment="TOP_CENTER" prefHeight="330.0" prefWidth="200.0">
+            <VBox alignment="TOP_CENTER" prefHeight="430.0" prefWidth="213.0">
                <children>
                   <Label alignment="TOP_CENTER" text="Livros">
                      <font>
                         <Font name="Arial Black" size="18.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
                   </Label>
                   <Button mnemonicParsing="false" onAction="#trocarTelaAdicionarLivro" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Adicionar Livro" textFill="WHITE">
                      <VBox.margin>
@@ -75,12 +76,15 @@
                   </ImageView>
                </children>
             </VBox>
-            <VBox alignment="TOP_CENTER" prefHeight="330.0" prefWidth="200.0">
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="213.0">
                <children>
                   <Label alignment="TOP_CENTER" text="Emrpéstimos">
                      <font>
                         <Font name="Arial Black" size="18.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
                   </Label>
                   <Button mnemonicParsing="false" onAction="#trocarTelaAdicionarEmprestimo" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296;" text="Adicionar Empréstimo" textFill="WHITE">
                      <VBox.margin>
@@ -103,6 +107,15 @@
                   </ImageView>
                </children>
             </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0" style="-fx-background-color: #387296;">
+         <children>
+            <Label text="Menu do Bibliotecário" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
          </children>
       </HBox>
    </children>
