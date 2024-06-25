@@ -26,8 +26,8 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Button>
-      <Button layoutX="496.0" layoutY="417.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" text="Menu" />
       <TextField layoutX="177.0" layoutY="173.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="286.0" />
       <Label layoutX="141.0" layoutY="177.0" text="CPF" />
+      <Button layoutX="510.0" layoutY="421.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #387296;" text="Menu" textFill="#fcfcfc" />
    </children>
 </AnchorPane>

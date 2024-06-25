@@ -11,7 +11,7 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.UsuarioController">
     <children>
-        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: blue;">
+        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #387296;">
             <children>
                 <Label alignment="CENTER" contentDisplay="CENTER" text="Cadastro do Bibliotecário" textFill="WHITE">
                     <font>

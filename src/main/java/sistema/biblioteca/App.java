@@ -5,8 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 public class App extends Application {
 
@@ -20,13 +22,15 @@ public class App extends Application {
         stage.show();
     }
 
-    public static void trocarLayout(String menu) throws IOException{
+    public static void trocarLayout(String menu) throws IOException {
         Parent root = FXMLLoader.load(App.class.getResource(menu));
         scene.setRoot(root);
     }
-   
+
     public static void main(String[] args) {
+        BibliotecaController biblioteca = new BibliotecaController();
+        biblioteca.carregarDadosBiblioteca();
+        biblioteca.salvarEstadoBiblioteca();
         launch();
     }
-
 }

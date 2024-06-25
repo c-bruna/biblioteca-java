@@ -2,11 +2,9 @@ package sistema.biblioteca.controlador;
 
 import java.io.IOException;
 
+import javafx.scene.control.*;
 import sistema.biblioteca.App;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 public class LoginController {
 
@@ -23,5 +21,6 @@ public class LoginController {
             App.trocarLayout("menu.fxml");
         }
     }
+
 
 }

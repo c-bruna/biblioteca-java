@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.UsuarioController">
    <children>
-      <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="640.0" style="-fx-background-color: blue;">
+      <HBox alignment="CENTER" minHeight="-Infinity" prefHeight="50.0" prefWidth="640.0" style="-fx-background-color: #387296;">
          <children>
             <Label text="CADASTRAR LIVRO" textFill="WHITE">
                <font>
@@ -25,9 +25,10 @@
       <Label layoutX="68.0" layoutY="291.0" text="Estoque" />
       <TextField layoutX="188.0" layoutY="106.0" prefHeight="25.0" prefWidth="286.0" promptText="Nome do livro" />
       <TextField layoutX="188.0" layoutY="147.0" prefHeight="25.0" prefWidth="286.0" promptText="Autor(a)" />
-      <TextField layoutX="188.0" layoutY="199.0" prefHeight="25.0" prefWidth="59.0" />
-      <TextField layoutX="188.0" layoutY="287.0" prefHeight="25.0" prefWidth="59.0" />
+      <TextField layoutX="188.0" layoutY="194.0" prefHeight="26.0" prefWidth="66.0" />
+      <TextField layoutX="188.0" layoutY="287.0" prefHeight="26.0" prefWidth="66.0" />
       <TextField layoutX="188.0" layoutY="241.0" prefHeight="25.0" prefWidth="160.0" />
-      <Button layoutX="267.0" layoutY="382.0" mnemonicParsing="false" text="Cadastrar" />
+      <Button layoutX="286.0" layoutY="375.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="90.0" text="Cadastrar" />
+      <Button layoutX="500.0" layoutY="411.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #387296;" text="Menu" textFill="#fcfcfc" />
    </children>
 </AnchorPane>

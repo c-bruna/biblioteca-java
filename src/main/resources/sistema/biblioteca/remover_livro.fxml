@@ -31,6 +31,6 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Button>
-      <Button layoutX="495.0" layoutY="407.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" text="Menu" />
+      <Button layoutX="511.0" layoutY="421.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #387296;" text="Menu" textFill="#fcfcfc" />
    </children>
 </AnchorPane>
