@@ -20,11 +20,11 @@
             </Label>
          </children>
       </HBox>
-      <Label layoutX="68.0" layoutY="111.0" text="Nome" />
-      <Label layoutX="68.0" layoutY="153.0" text="CPF" />
-      <Label layoutX="68.0" layoutY="198.0" text="Matricula" />
-      <Label layoutX="67.0" layoutY="247.0" text="Assunto" />
-      <Label layoutX="67.0" layoutY="304.0" text="Curso" />
+      <Label layoutX="68.0" layoutY="110.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="85.0" text="Nome" />
+      <Label layoutX="68.0" layoutY="151.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="85.0" text="CPF" />
+      <Label layoutX="68.0" layoutY="197.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="85.0" text="Matricula" />
+      <Label layoutX="68.0" layoutY="246.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="111.0" text="Data de Nascimento" />
+      <Label layoutX="68.0" layoutY="303.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="85.0" text="Curso" />
       <TextField layoutX="188.0" layoutY="106.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="286.0" />
       <TextField layoutX="188.0" layoutY="147.0" prefHeight="26.0" prefWidth="286.0" />
       <TextField layoutX="188.0" layoutY="193.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="286.0" />
