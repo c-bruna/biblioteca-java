@@ -39,8 +39,10 @@ public class ExibirLivros {
     @FXML
     private Label labelUsuarioQtdEmEstoque;
 
+    @FXML
     private ObservableList<Livro> livrosData;
 
+    @FXML
     BibliotecaController biblioteca = new BibliotecaController();
 
     @FXML
@@ -59,12 +61,14 @@ public class ExibirLivros {
         App.trocarLayout("menu.fxml");
     }
 
+    @FXML
     public void carregarTableViewLivros() {
         List<Livro> listLivros = BancoDAO.getInstance().getLivros();
         livrosData = FXCollections.observableArrayList(listLivros);
         tableViewLivros.setItems(livrosData);
     }
 
+    @FXML
     private void selecionarItemTableViewUsuarios(Livro lv) {
         if (lv != null) {
             labelLivroTitulo.setText(lv.getTitulo());

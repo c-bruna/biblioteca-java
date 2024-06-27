@@ -32,10 +32,13 @@ public class ExibirEmprestimos {
     @FXML
     private TableColumn<Emprestimo, String> tableColumnEmprestimoDataPrevista;
 
+    @FXML
     private ObservableList<Emprestimo> emprestimosData;
 
+    @FXML
     BibliotecaController biblioteca = new BibliotecaController();
 
+    @FXML
     private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     @FXML
@@ -54,6 +57,7 @@ public class ExibirEmprestimos {
         App.trocarLayout("menu.fxml");
     }
 
+    @FXML
     public void carregarTableViewLivros() {
         List<Emprestimo> listEmprestimos = BancoDAO.getInstance().getEmprestimos();
         emprestimosData = FXCollections.observableArrayList(listEmprestimos);

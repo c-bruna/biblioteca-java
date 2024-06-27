@@ -43,8 +43,10 @@ public class ExibirUsuarios {
     @FXML
     private Label labelUsuarioQtdEmprestimos;
 
+    @FXML
     private ObservableList<Usuario> usuarioData;
 
+    @FXML
     BibliotecaController biblioteca = new BibliotecaController();
 
     @FXML
@@ -64,12 +66,14 @@ public class ExibirUsuarios {
         App.trocarLayout("menu.fxml");
     }
 
+    @FXML
     public void carregarTableViewUsuarios() {
         List<Usuario> listPessoas = BancoDAO.getInstance().getUsuarios();
         usuarioData = FXCollections.observableArrayList(listPessoas);
         tableViewUsuarios.setItems(usuarioData);
     }
 
+    @FXML
     private void selecionarItemTableViewUsuarios(Usuario user) {
         if (user != null) {
             labelUsuarioNome.setText(user.getNome());
