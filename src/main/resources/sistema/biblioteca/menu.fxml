@@ -46,6 +46,11 @@
                      </VBox.margin>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#trocarTelaExibirUsuarios" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296; -fx-cursor: hand;" text="Exibir Usuários" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#trocarTelaSituacaoUsuario" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296; -fx-cursor: hand;" text="Situação do Usuário" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" prefHeight="430.0" prefWidth="213.0">
@@ -69,6 +74,11 @@
                      </VBox.margin>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#trocarTelaExibirLivros" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296; -fx-cursor: hand;" text="Exibir Livros" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#trocarTelaPesquisarLivros" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #387296; -fx-cursor: hand;" text="Pesquisar Livro" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="213.0">

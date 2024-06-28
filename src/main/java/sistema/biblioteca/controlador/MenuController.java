@@ -55,6 +55,16 @@ public class MenuController {
     }
 
     @FXML
+    private void trocarTelaPesquisarLivros() throws IOException {
+        App.trocarLayout("pesquisar_livro.fxml");
+    }
+
+    @FXML
+    private void trocarTelaSituacaoUsuario() throws IOException {
+        App.trocarLayout("situacao_usuario.fxml");
+    }
+
+    @FXML
     private void trocarTelaMenu() throws IOException {
         App.trocarLayout("exibir_emprestimos.fxml");
     }
