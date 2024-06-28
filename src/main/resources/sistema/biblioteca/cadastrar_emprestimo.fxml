@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -8,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.EmprestimoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.EmprestimoController">
    <children>
       <Label layoutX="78.0" layoutY="121.0" text="Nome do Livro" />
       <TextField fx:id="tituloLivroTextField" layoutX="198.0" layoutY="116.0" prefHeight="25.0" prefWidth="286.0" promptText="Nome do livro" />
@@ -23,8 +28,8 @@
       </HBox>
       <Label layoutX="78.0" layoutY="160.0" prefHeight="17.0" prefWidth="97.0" text="CPF do usuário" />
       <TextField fx:id="cpfUsuarioTextField" layoutX="198.0" layoutY="156.0" prefHeight="25.0" prefWidth="124.0" promptText="CPF" />
-      <Button layoutX="500.0" layoutY="411.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #387296;" text="Menu" textFill="#fcfcfc" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="240.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCadastrarButtonAction" prefHeight="35.0" prefWidth="90.0" text="Salvar" textAlignment="CENTER">
+      <Button layoutX="500.0" layoutY="411.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #387296; -fx-cursor: hand;" text="Menu" textFill="#fcfcfc" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="240.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCadastrarButtonAction" prefHeight="41.0" prefWidth="90.0" style="-fx-cursor: hand;" text="Salvar" textAlignment="CENTER">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>

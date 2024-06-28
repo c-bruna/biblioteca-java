@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
@@ -9,7 +15,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.UsuarioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.UsuarioController">
    <children>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0" style="-fx-background-color: #387296;">
          <children>
@@ -21,13 +27,13 @@
          </children>
       </HBox>
       <Group layoutX="151.0" layoutY="174.0" />
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="297.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="Salvar" textAlignment="CENTER">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="297.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" style="-fx-cursor: hand;" text="Salvar" textAlignment="CENTER">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </Button>
       <TextField layoutX="177.0" layoutY="173.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="286.0" />
       <Label layoutX="141.0" layoutY="177.0" text="CPF" />
-      <Button layoutX="510.0" layoutY="421.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #387296;" text="Menu" textFill="#fcfcfc" />
+      <Button layoutX="510.0" layoutY="421.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #387296; -fx-cursor: hand;" text="Menu" textFill="#fcfcfc" />
    </children>
 </AnchorPane>
