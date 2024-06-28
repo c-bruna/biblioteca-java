@@ -65,6 +65,7 @@ public class UsuarioController {
         if (sucesso) {
             System.out.println("Estudante cadastrado com sucesso!");
             limparCampos();
+            controlleUsuarios.salvarEstadoBiblioteca();
         } else {
             System.out.println("Erro ao cadastrar estudante. Verifique se o CPF já está cadastrado.");
         }

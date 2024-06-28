@@ -8,5 +8,4 @@ public interface OperacoesLivros {
     void removerLivroPorTitulo(String tituloLivro);
     void pesquisarLivroPorTitulo(String tituloLivro);
     void exibirListaLivros();
-    Livro buscarLivroPorTitulo(String tituloLivro);
 }

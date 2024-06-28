@@ -84,17 +84,12 @@ public class ControlleLivros implements OperacoesLivros {
      * @param tituloLivro Título do livro a ser buscado.
      * @return O livro correspondente ou null se não encontrado.
      */
-    public Livro buscarLivroPorTitulo(String tituloLivro) {
-        try{
-            for(Livro lv: biblioteca.getLivros()){
-                if(lv.getTitulo().equals(tituloLivro)){
-                    return lv;
+    public static Livro buscarLivroPorTitulo(String tituloLivro) {
+        for(Livro lv : biblioteca.getLivros()){
+            if(lv.getTitulo().equals(tituloLivro)){
+                return lv;
                 }
             }
-        } catch (Exception e){
-            throw new NoSuchElementException("o livro " + tituloLivro + " nao foi encontrado");
-        }
-
         return null;
     }
 

@@ -118,18 +118,14 @@ public class ControlleUsuarios implements OperacoesUsuarios{
      * @return O usuário correspondente ao CPF fornecido ou null se não encontrado.
      */
     public static Usuario buscarUsuarioPorCpf(String cpf) {
-        try{
-            for(Usuario user: biblioteca.getUsuarios()){
-                if(user.getCpf().equals(cpf)){
-                    return user;
-                }
+        for (Usuario user : biblioteca.getUsuarios() ) {
+            if (user.getCpf().equals(cpf)) {
+                return user;
             }
-        } catch (Exception e){
-            throw new NoSuchElementException("o usuário de CPF " + cpf + " nao foi encontrado");
         }
-
         return null;
     }
+
 
     /**
      * Exibe a lista de usuários cadastrados na biblioteca.

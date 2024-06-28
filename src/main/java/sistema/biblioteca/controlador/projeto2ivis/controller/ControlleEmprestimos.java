@@ -30,14 +30,14 @@ public class ControlleEmprestimos implements OperacoesEmprestimos {
     public boolean adicionarEmprestimoLivro(String cpfUsuario, String tituloLivro) {
 
         Usuario user = ControlleUsuarios.buscarUsuarioPorCpf(cpfUsuario);
-        Livro lv = instancia_bibliotecaController.buscarLivroPorTitulo(tituloLivro);
+        Livro lv = ControlleLivros.buscarLivroPorTitulo(tituloLivro);
 
-        if(user == null){ throw new NoSuchElementException("Usuário nao cadastrado."); }
+        if(user == null){ return false; }
 
-        if(lv == null){ throw new NoSuchElementException("Livro nao cadastrado."); }
+        if(lv == null){ return false; }
 
         if (lv.getEstado() == EstadoLivro.emprestado) {
-            throw new IllegalStateException("Livro não está disponível para empréstimo.");
+            return false;
         }
 
         int diasDeEmprestimo = 0;
