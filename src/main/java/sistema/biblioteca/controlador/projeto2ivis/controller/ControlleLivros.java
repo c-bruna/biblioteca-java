@@ -47,17 +47,19 @@ public class ControlleLivros implements OperacoesLivros {
      * Remove um livro da biblioteca pelo título.
      */
     @Override
-    public void removerLivroPorTitulo(String titulo) {
+    public boolean removerLivroPorTitulo(String titulo) {
         Livro lv = buscarLivroPorTitulo(titulo);
-        if( lv == null){
-            throw  new IllegalArgumentException("\nElemento não localizado");
-        }
-        else if (lv.getEstado() == EstadoLivro.emprestado) {
-            throw new IllegalStateException("O livro esta emprestado e nao pode ser removido.");
+        if (lv == null) {
+            System.out.println("\nElemento não localizado");
+            return false;
+        } else if (lv.getEstado() == EstadoLivro.emprestado) {
+            System.out.println("O livro está emprestado e não pode ser removido.");
+            return false;
         }
 
         biblioteca.getLivros().remove(lv);
         ControlleSerializacao.salvarLivros();
+        return true;
     }
 
     /**

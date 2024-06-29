@@ -46,10 +46,11 @@ public class BibliotecaController {
      * Remove um livro pelo título.
      * @param titulo O título do livro a ser removido.
      */
-    public void removerLivroPorTitulo(String titulo) {
-        livroController.removerLivroPorTitulo(titulo);
-    }
+    public boolean removerLivroPorTotulo (String titulo){
+        boolean bool = livroController.removerLivroPorTitulo(titulo);
 
+        return bool;
+    }
     /**
      * Pesquisa um livro pelo título.
      * @param titulo O título do livro a ser pesquisado.

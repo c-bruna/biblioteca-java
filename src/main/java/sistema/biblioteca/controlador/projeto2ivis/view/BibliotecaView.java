@@ -255,10 +255,11 @@ public class BibliotecaView {
         }
     }
 
-    private static void removerLivroPorTitulo() {
+    private static boolean removerLivroPorTitulo() {
         System.out.print("Título: ");
         String titulo = scanner.nextLine();
-        biblioteca.removerLivroPorTitulo(titulo);
+        boolean sucesso = biblioteca.removerLivroPorTitulo(titulo);
+        return sucesso;
     }
 
     private static void emprestarLivro() {
