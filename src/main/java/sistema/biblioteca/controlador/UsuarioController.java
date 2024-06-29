@@ -28,7 +28,7 @@ public class UsuarioController {
     private DatePicker dataNascimentoDatePicker;
 
     @FXML
-    private TextField cursoTextField;
+    private TextField cursoOUdeparmanetoTextField;
 
     @FXML
     private TextField loginTextField;
@@ -53,7 +53,7 @@ public class UsuarioController {
         String cpf = cpfTextField.getText();
         String matricula = matriculaTextField.getText();
         LocalDate dataNascimento = dataNascimentoDatePicker.getValue();
-        String curso = cursoTextField.getText();
+        String curso = cursoOUdeparmanetoTextField.getText();
 
         if (nome.isEmpty() || cpf.isEmpty() || matricula.isEmpty() || dataNascimento == null || curso.isEmpty()) {
             System.out.println("Por favor, preencha todos os campos.");
@@ -64,7 +64,7 @@ public class UsuarioController {
 
         if (sucesso) {
             System.out.println("Estudante cadastrado com sucesso!");
-            limparCampos();
+            limparCamposEstudanteProfessor();
             controlleUsuarios.salvarEstadoBiblioteca();
         } else {
             System.out.println("Erro ao cadastrar estudante. Verifique se o CPF já está cadastrado.");
@@ -77,7 +77,7 @@ public class UsuarioController {
         String cpf = cpfTextField.getText();
         String matricula = matriculaTextField.getText();
         LocalDate dataNascimento = dataNascimentoDatePicker.getValue();
-        String departamento = cursoTextField.getText(); // Campo 'cursoTextField' será utilizado para departamento dos professores
+        String departamento = cursoOUdeparmanetoTextField.getText(); // Campo 'cursoTextField' será utilizado para departamento dos professores
 
         if (nome.isEmpty() || cpf.isEmpty() || matricula.isEmpty() || dataNascimento == null || departamento.isEmpty()) {
             System.out.println("Por favor, preencha todos os campos.");
@@ -88,6 +88,8 @@ public class UsuarioController {
 
         if (sucesso) {
             System.out.println("Professor cadastrado com sucesso!");
+            limparCamposEstudanteProfessor();
+            controlleUsuarios.salvarEstadoBiblioteca();
         } else {
             System.out.println("Erro ao cadastrar professor. Verifique se o CPF já está cadastrado.");
         }
@@ -111,6 +113,8 @@ public class UsuarioController {
 
         if (sucesso) {
             System.out.println("Bibliotecário cadastrado com sucesso!");
+            limparCamposBibliotecario();
+            controlleUsuarios.salvarEstadoBiblioteca();
         } else {
             System.out.println("Erro ao cadastrar bibliotecário. Verifique se o CPF já está cadastrado.");
         }
@@ -138,11 +142,24 @@ public class UsuarioController {
         App.trocarLayout("cadastrar_bibliotecario.fxml");
     }
 
-    private void limparCampos() {
+    private void limparCamposEstudanteProfessor() {
         nomeTextField.clear();
         cpfTextField.clear();
         matriculaTextField.clear();
         dataNascimentoDatePicker.setValue(null);
-        cursoTextField.clear();
+        cursoOUdeparmanetoTextField.clear();
     }
+
+    private void limparCamposBibliotecario() {
+        nomeTextField.clear();
+        cpfTextField.clear();
+        matriculaTextField.clear();
+        dataNascimentoDatePicker.setValue(null);
+        cursoOUdeparmanetoTextField.clear();
+        loginTextField.clear();
+        senhaTextField.clear();
+    }
+
+
+
 }

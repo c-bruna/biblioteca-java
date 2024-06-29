@@ -43,4 +43,16 @@ public class BancoDAO {
     public void setEmprestimos(ArrayList<Emprestimo> emprestimos) {
         this.emprestimos = emprestimos;
     }
+
+    public ArrayList<Bibliotecario> getBibliotecarios() {
+        ArrayList<Bibliotecario> bibliotecarios = new ArrayList<>();
+
+        for (Usuario usuario : usuarios) {
+            if (usuario instanceof Bibliotecario) {
+                bibliotecarios.add((Bibliotecario) usuario);
+            }
+        }
+        return bibliotecarios;
+    }
+
 }
