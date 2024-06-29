@@ -29,6 +29,9 @@ public class ExibirUsuarios {
     private TableColumn<Usuario, String> tableColumnUsuarioCPF;
 
     @FXML
+    private Label labelTipoUsuario;
+
+    @FXML
     private Label labelUsuarioNome;
 
     @FXML
@@ -76,6 +79,13 @@ public class ExibirUsuarios {
     @FXML
     private void selecionarItemTableViewUsuarios(Usuario user) {
         if (user != null) {
+            if(user instanceof Estudantes){
+                labelTipoUsuario.setText("Estudante");
+            }else if(user instanceof Professores){
+                labelTipoUsuario.setText("Professor");
+            }else if(user instanceof Bibliotecario){
+                labelTipoUsuario.setText("Bibliotecário");
+            }
             labelUsuarioNome.setText(user.getNome());
             labelUsuarioCPF.setText(user.getCpf());
             labelUsuarioMatricula.setText(String.valueOf(user.getMatricula()));
