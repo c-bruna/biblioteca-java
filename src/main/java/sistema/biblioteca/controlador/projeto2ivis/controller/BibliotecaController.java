@@ -186,8 +186,9 @@ public class BibliotecaController {
      * @param cpfUsuario O usuário que está devolvendo o livro.
      * @param tituloLivro O livro a ser devolvido.
      */
-    public void devolverEmprestimoLivro(String cpfUsuario, String tituloLivro) {
-        emprestimoController.devolverEmprestimoLivro(cpfUsuario, tituloLivro);
+    public boolean devolverEmprestimoLivro(String cpfUsuario, String tituloLivro) {
+        boolean bool = emprestimoController.devolverEmprestimoLivro(cpfUsuario, tituloLivro);
+        return bool;
     }
 
     /** Exibe a lista de empréstimos. */

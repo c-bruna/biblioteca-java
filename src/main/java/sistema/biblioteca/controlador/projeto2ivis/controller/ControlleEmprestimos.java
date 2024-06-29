@@ -80,7 +80,7 @@ public class ControlleEmprestimos implements OperacoesEmprestimos {
      * @param cpfUsuario O usuário que está devolvendo o livro.
      * @param tituloLivro O livro que está sendo devolvido.
      */
-    public void devolverEmprestimoLivro(String cpfUsuario, String tituloLivro) {
+    public boolean devolverEmprestimoLivro(String cpfUsuario, String tituloLivro) {
         //Verificando se o usuário e livro estão cadastrados
         Usuario user = ControlleUsuarios.buscarUsuarioPorCpf(cpfUsuario);
         Livro lv = instancia_bibliotecaController.buscarLivroPorTitulo(tituloLivro);
@@ -105,6 +105,7 @@ public class ControlleEmprestimos implements OperacoesEmprestimos {
         user.setQtdEmprestimosAtivos(user.getQtdEmprestimosAtivos() - 1 );
         lv.setQtdEstoque(lv.getQtdEstoque() + 1);
         instancia_bibliotecaController.salvarEstadoBiblioteca();
+        return true;
     }
 
 
