@@ -19,9 +19,6 @@ public class LoginController {
     @FXML
     private Label labelCredencial;
 
-    @FXML
-    private Label nada;
-
     BancoDAO banco = BancoDAO.getInstance();
 
     @FXML
