@@ -35,7 +35,7 @@ public class LivrosController {
     private Label lbLivroInvalido;
 
     @FXML
-    private Label lbAvisoCamposVazios;
+    private Label labelAviso;
 
     private BibliotecaController controlleLivros;
 
@@ -56,7 +56,7 @@ public class LivrosController {
         String estoque = estoqueTextField.getText();
 
         if (titulo.isEmpty() || autor.isEmpty() || assunto.isEmpty() || anoLancamento.isEmpty() || estoque.isEmpty() ) {
-            lbAvisoCamposVazios.setText("Por favor, preencha todos os campos.");
+            labelAviso.setText("Por favor, preencha todos os campos.");
             return;
         }
 

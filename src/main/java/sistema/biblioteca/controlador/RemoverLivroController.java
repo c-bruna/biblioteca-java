@@ -40,7 +40,7 @@ public class RemoverLivroController {
             return;
         }
 
-        boolean sucesso = controleLivros.removerLivro(nomeLivro);
+        boolean sucesso = controleLivros.removerLivroPorTitulo(nomeLivro);
 
         if (sucesso) {
             System.out.println("Livro removido com sucesso!");

@@ -46,9 +46,8 @@ public class BibliotecaController {
      * Remove um livro pelo título.
      * @param titulo O título do livro a ser removido.
      */
-    public boolean removerLivroPorTotulo (String titulo){
+    public boolean removerLivroPorTitulo (String titulo){
         boolean bool = livroController.removerLivroPorTitulo(titulo);
-
         return bool;
     }
     /**
@@ -135,8 +134,9 @@ public class BibliotecaController {
      * Remover um usuário a partir do seu cpf
      *@param cpfUsuario O CPF do usuário.
      */
-    public void removerUsuario(String cpfUsuario){
-        usuarioController.removerUsuario(cpfUsuario);
+    public boolean removerUsuario(String cpfUsuario){
+        boolean bool = usuarioController.removerUsuario(cpfUsuario);
+        return bool;
     }
 
     /**

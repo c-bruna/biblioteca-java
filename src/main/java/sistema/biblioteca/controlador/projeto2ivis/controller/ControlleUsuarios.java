@@ -96,20 +96,23 @@ public class ControlleUsuarios implements OperacoesUsuarios{
     /**
      * Remove um usuário da biblioteca pelo CPF.
      * Se o usuário possui empréstimos ativos, todos os empréstimos serão devolvidos antes da remoção do usuário.
+     *
      * @param cpfUsuario O CPF do usuário a ser removido.
+     * @return
      */
     @Override
-    public void removerUsuario(String cpfUsuario) {
+    public boolean removerUsuario(String cpfUsuario) {
         Usuario user = ControlleUsuarios.buscarUsuarioPorCpf(cpfUsuario);
         if(user == null){ throw new NoSuchElementException("Usuário nao cadastrado."); }
 
         if(user.getQtdEmprestimosAtivos() > 0){
             System.out.println("Não é possível remover usuário, pois possui empréstimos ativos");
-            return;
+            return false;
         }
 
         biblioteca.getUsuarios().remove(user);
         ControlleSerializacao.salvarUsuarios();
+        return true;
     }
 
     /**

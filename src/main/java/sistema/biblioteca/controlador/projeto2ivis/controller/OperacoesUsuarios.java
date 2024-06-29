@@ -8,7 +8,7 @@ public interface OperacoesUsuarios {
     boolean adicionarProfessor(String nome, String cpf, String matricula, LocalDate dadaNascimento, String departamento);
     boolean adicionarEstudante(String nome, String cpf, String matricula, LocalDate dadaNascimento, String curso);
     boolean adicionarBibliotecario(String nome, String cpf, String matricula, LocalDate dadaNascimento, String login, String senha);
-    void removerUsuario(String cpfUsuario);
+    boolean removerUsuario(String cpfUsuario);
 
     //BUSCAR E EXIBIR USUÁRIOS
     void exibirListaUsuarios();
