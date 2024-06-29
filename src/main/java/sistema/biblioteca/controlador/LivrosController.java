@@ -2,6 +2,7 @@ package sistema.biblioteca.controlador;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
 import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
@@ -27,6 +28,15 @@ public class LivrosController {
     @FXML
     private TextField estoqueTextField;
 
+    @FXML
+    private Label lbLivroValido;
+
+    @FXML
+    private Label lbLivroInvalido;
+
+    @FXML
+    private Label lbAvisoCamposVazios;
+
     private BibliotecaController controlleLivros;
 
     public LivrosController() { controlleLivros = new BibliotecaController(); }
@@ -46,7 +56,7 @@ public class LivrosController {
         String estoque = estoqueTextField.getText();
 
         if (titulo.isEmpty() || autor.isEmpty() || assunto.isEmpty() || anoLancamento.isEmpty() || estoque.isEmpty() ) {
-            System.out.println("Por favor, preencha todos os campos.");
+            lbAvisoCamposVazios.setText("Por favor, preencha todos os campos.");
             return;
         }
 
@@ -56,11 +66,11 @@ public class LivrosController {
         boolean sucesso = controlleLivros.adicionarLivro(titulo, autor, assunto, anoLancamentoInt, estoqueInt);
 
         if (sucesso) {
-            System.out.println("Livro cadastrado com sucesso!");
+            lbLivroValido.setText("Livro adicionado.");
             limparCampos();
             controlleLivros.salvarEstadoBiblioteca();
         } else {
-            System.out.println("Erro ao cadastrar livro. Verifique se o livro já está cadastrado.");
+            lbLivroInvalido.setText("Erro ao cadastrar livro. Verifique se o livro já está cadastrado.");
         }
     }
 
