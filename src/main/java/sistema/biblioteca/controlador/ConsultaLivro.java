@@ -20,23 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConsultaLivro {
-    @FXML
-    private TableView<Emprestimo> tableViewEmprestimos;
 
     @FXML
-    private TableColumn<Emprestimo, String> tableColumnEmprestimoUsuario;
-
-    @FXML
-    private TableColumn<Emprestimo, String> tableColumnEmprestimoLivro;
-
-    @FXML
-    private TableColumn<Emprestimo, String> tableColumnDevolucao;
-
-    @FXML
-    private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-    @FXML
-    private TextField PesquisarTituloLivro;
+    private TextField tituloTextField;
 
     @FXML
     private Label labelLivroTitulo;
@@ -54,44 +40,27 @@ public class ConsultaLivro {
     private Label labelUsuarioQtdEmEstoque;
 
     @FXML
-    private ObservableList<Emprestimo> livroEmprestimosData;
-
-    @FXML
-    private void handlePesquisarButtonAction(ActionEvent event) {
-        String nomeLivro = PesquisarTituloLivro.getText();
-
-        if (nomeLivro.isEmpty()) {
-            System.out.println("Por favor, preencha o campo Nome do Livro.");
-            return;
-        }
-
-        Livro lv = ControlleLivros.buscarLivroPorTitulo(nomeLivro);
-
-        if (lv == null) {
-            System.out.println("Livro não encontrado.");
-            return;
-        }
-
-        List<Emprestimo> emprestimosLivro = ControlleLivros.buscarEmprestimospPorLivro(nomeLivro);
-        livroEmprestimosData = FXCollections.observableArrayList(emprestimosLivro);
-        tableViewEmprestimos.setItems(livroEmprestimosData);
-
-        tableColumnEmprestimoUsuario.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getUsuario().getNome()));
-        tableColumnEmprestimoLivro.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getLivro().getTitulo()));
-        tableColumnDevolucao.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDataDevolucaoPrevista().format(dateFormatter)));
-
-        labelLivroTitulo.setText(lv.getTitulo());
-        labelLivroAutor.setText(lv.getAutor());
-        labelLivroCategoria.setText(lv.getAssunto());
-        labelLivroAno.setText(String.valueOf(lv.getAnoLancamento()));
-        labelUsuarioQtdEmEstoque.setText(String.valueOf(lv.getQtdEstoque()));
-    }
-
-
-    @FXML
     private void trocarTelaMenu() throws IOException {
         App.trocarLayout("menu.fxml");
     }
 
+    @FXML
+    private void PesquisarLivroPorTitulo() {
+        String nomeLivro = tituloTextField.getText();
+        Livro lv = ControlleLivros.buscarLivroPorTitulo(nomeLivro);
 
+        if(lv != null) {
+            labelLivroTitulo.setText(lv.getTitulo());
+            labelLivroAutor.setText(lv.getAutor());
+            labelLivroCategoria.setText(lv.getAssunto());
+            labelLivroAno.setText(String.valueOf(lv.getAnoLancamento()));
+            labelUsuarioQtdEmEstoque.setText(String.valueOf(lv.getQtdEstoque()));
+        }else{
+            labelLivroTitulo.setText("");
+            labelLivroAutor.setText("");
+            labelLivroCategoria.setText("");
+            labelLivroAno.setText("");
+            labelUsuarioQtdEmEstoque.setText("");
+        }
+    }
 }

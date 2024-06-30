@@ -34,5 +34,4 @@ public class App extends Application {
         biblioteca.salvarEstadoBiblioteca();
         launch();
     }
-
 }

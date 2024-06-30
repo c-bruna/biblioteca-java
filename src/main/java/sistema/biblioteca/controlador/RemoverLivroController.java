@@ -14,22 +14,12 @@ public class RemoverLivroController {
     @FXML
     private TextField nomeLivroTextField;
 
-    @FXML
-    private Button salvarButton;
-
-    @FXML
-    private Button menuButton;
-
     private BibliotecaController controleLivros;
 
     public RemoverLivroController() {
         controleLivros = new BibliotecaController();
     }
 
-    @FXML
-    private void initialize() {
-        // Inicialização, se necessário
-    }
 
     @FXML
     private void handleSalvarButtonAction(ActionEvent event) {

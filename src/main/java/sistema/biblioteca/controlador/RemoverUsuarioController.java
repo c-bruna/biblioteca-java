@@ -14,12 +14,6 @@ public class RemoverUsuarioController {
     @FXML
     private TextField cpfTextField;
 
-    @FXML
-    private Button salvarButton;
-
-    @FXML
-    private Button menuButton;
-
     private BibliotecaController controleUsuarios;
 
     public RemoverUsuarioController() {
