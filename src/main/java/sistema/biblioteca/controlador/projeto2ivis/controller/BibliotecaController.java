@@ -1,6 +1,8 @@
 package sistema.biblioteca.controlador.projeto2ivis.controller;
 
 import java.time.LocalDate;
+import java.util.List;
+
 import sistema.biblioteca.controlador.projeto2ivis.model.*;
 
 /**
@@ -233,6 +235,10 @@ public class BibliotecaController {
     public Livro buscarLivroPorTitulo(String tituloLivro){
         Livro lv = livroController.buscarLivroPorTitulo(tituloLivro);
         return lv;
+    }
+
+    public List<Emprestimo> getEmprestimos() {
+        return biblioteca.getEmprestimos();
     }
 
 }

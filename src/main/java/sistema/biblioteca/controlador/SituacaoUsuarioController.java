@@ -17,16 +17,10 @@ import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class ExibirUsuarios {
+public class SituacaoUsuarioController {
 
     @FXML
-    private TableView<Usuario> tableViewUsuarios;
-
-    @FXML
-    private TableColumn<Usuario, String> tableColumnUsuarioNome;
-
-    @FXML
-    private TableColumn<Usuario, String> tableColumnUsuarioCPF;
+    private TextField cpfTextField;
 
     @FXML
     private Label labelTipoUsuario;
@@ -47,21 +41,11 @@ public class ExibirUsuarios {
     private Label labelUsuarioQtdEmprestimos;
 
     @FXML
-    private ObservableList<Usuario> usuarioData;
-
-    @FXML
     BibliotecaController biblioteca = new BibliotecaController();
 
     @FXML
     private void initialize() {
         biblioteca.carregarDadosBiblioteca();
-        tableColumnUsuarioNome.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNome()));
-        tableColumnUsuarioCPF.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCpf()));
-
-        carregarTableViewUsuarios();
-
-        tableViewUsuarios.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> selecionarItemTableViewUsuarios(newValue));
     }
 
     @FXML
@@ -70,20 +54,15 @@ public class ExibirUsuarios {
     }
 
     @FXML
-    public void carregarTableViewUsuarios() {
-        List<Usuario> listPessoas = BancoDAO.getInstance().getUsuarios();
-        usuarioData = FXCollections.observableArrayList(listPessoas);
-        tableViewUsuarios.setItems(usuarioData);
-    }
-
-    @FXML
-    private void selecionarItemTableViewUsuarios(Usuario user) {
+    private void pesquisarUsuarioPorCPF() {
+        String cpf = cpfTextField.getText();
+        Usuario user = biblioteca.buscarUsuarioPorCpf(cpf);
         if (user != null) {
-            if(user instanceof Estudantes){
+            if (user instanceof Estudantes) {
                 labelTipoUsuario.setText("Estudante");
-            }else if(user instanceof Professores){
+            } else if (user instanceof Professores) {
                 labelTipoUsuario.setText("Professor");
-            }else if(user instanceof Bibliotecario){
+            } else if (user instanceof Bibliotecario) {
                 labelTipoUsuario.setText("Bibliotecário");
             }
             labelUsuarioNome.setText(user.getNome());
@@ -92,6 +71,7 @@ public class ExibirUsuarios {
             labelUsuarioDataNascimento.setText(user.getDadaNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
             labelUsuarioQtdEmprestimos.setText(String.valueOf(user.getQtdEmprestimosAtivos()));
         } else {
+            labelTipoUsuario.setText("");
             labelUsuarioNome.setText("");
             labelUsuarioCPF.setText("");
             labelUsuarioMatricula.setText("");
