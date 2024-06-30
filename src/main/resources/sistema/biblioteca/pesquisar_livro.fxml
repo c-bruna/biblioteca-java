@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
@@ -15,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.LivrosController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistema.biblioteca.controlador.LivrosController">
     <children>
         <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0" style="-fx-background-color: #387296;">
             <children>
@@ -26,17 +20,14 @@
                 </Label>
             </children>
         </HBox>
-        <Group layoutX="94.0" layoutY="145.0">
-            <children>
-                <TextField layoutX="70.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="286.0" />
-                <Label layoutX="-2.0" layoutY="18.0" text="Titulo" />
-            </children>
-        </Group>
+        <Group layoutX="94.0" layoutY="145.0" />
         <Button alignment="CENTER" contentDisplay="CENTER" layoutX="274.0" layoutY="271.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" style="-fx-cursor: hand;" text="Enviar" textAlignment="CENTER">
             <padding>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
         </Button>
         <Button layoutX="511.0" layoutY="421.0" mnemonicParsing="false" onAction="#trocarTelaMenu" prefHeight="27.0" prefWidth="99.0" style="-fx-background-color: #387296; -fx-cursor: hand;" text="Menu" textFill="#fcfcfc" />
+          <TextField layoutX="177.0" layoutY="166.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="286.0" />
+          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="171.0" prefHeight="18.0" prefWidth="49.0" text="Titulo" textAlignment="JUSTIFY" />
     </children>
 </AnchorPane>

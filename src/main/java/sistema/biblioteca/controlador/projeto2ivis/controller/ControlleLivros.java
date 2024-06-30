@@ -1,5 +1,6 @@
 package sistema.biblioteca.controlador.projeto2ivis.controller;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import sistema.biblioteca.controlador.projeto2ivis.model.*;
 
@@ -110,6 +111,28 @@ public class ControlleLivros implements OperacoesLivros {
                 lv.exibirDetalhesLivro();
             }
         }
+    }
+
+    public static ArrayList<Emprestimo> buscarEmprestimospPorLivro(String tituloLivro) {
+
+        ArrayList<Emprestimo> emprestimos = new ArrayList<>();
+
+        Livro livro = buscarLivroPorTitulo(tituloLivro);
+
+        if (livro == null) {
+            System.out.println("Livro não encontrado.");
+            return emprestimos;
+        }
+
+        ArrayList<Emprestimo> todosEmprestimos = biblioteca.getEmprestimos();
+
+        for (Emprestimo emp : todosEmprestimos) {
+            if (emp.getLivro().equals(livro)) {
+                emprestimos.add(emp);
+            }
+        }
+
+        return emprestimos;
     }
 
 

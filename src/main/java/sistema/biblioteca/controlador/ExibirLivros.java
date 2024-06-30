@@ -75,7 +75,7 @@ public class ExibirLivros {
             labelLivroAutor.setText(lv.getAutor());
             labelLivroCategoria.setText(String.valueOf(lv.getAssunto()));
             labelLivroAno.setText(String.valueOf(lv.getAnoLancamento()));
-            labelUsuarioQtdEmEstoque.setText(String.valueOf(String.valueOf(lv.getQtdEstoque())));
+            labelUsuarioQtdEmEstoque.setText(String.valueOf(lv.getQtdEstoque()));
         } else {
             labelLivroTitulo.setText("");
             labelLivroAutor.setText("");

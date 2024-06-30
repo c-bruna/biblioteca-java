@@ -30,9 +30,9 @@ public class App extends Application {
 
     public static void main(String[] args) {
         BibliotecaController biblioteca = new BibliotecaController();
-        biblioteca.adicionarEmprestimoLivro("0000","Harry Potter");
         biblioteca.carregarDadosBiblioteca();
         biblioteca.salvarEstadoBiblioteca();
         launch();
     }
+
 }
