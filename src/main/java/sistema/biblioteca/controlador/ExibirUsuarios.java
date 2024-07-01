@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
 import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
 import sistema.biblioteca.controlador.projeto2ivis.model.BancoDAO;
@@ -47,6 +46,12 @@ public class ExibirUsuarios {
     private Label labelUsuarioQtdEmprestimos;
 
     @FXML
+    private Label labelCursoDepartamentoLogin;
+
+    @FXML
+    private Label labelCDouL;
+
+    @FXML
     private ObservableList<Usuario> usuarioData;
 
     @FXML
@@ -81,10 +86,16 @@ public class ExibirUsuarios {
         if (user != null) {
             if(user instanceof Estudantes){
                 labelTipoUsuario.setText("Estudante");
+                labelCursoDepartamentoLogin.setText("Curso");
+                labelCDouL.setText(((Estudantes) user).getCurso());
             }else if(user instanceof Professores){
                 labelTipoUsuario.setText("Professor");
+                labelCursoDepartamentoLogin.setText("Departamento");
+                labelCDouL.setText(((Professores) user).getDepartamento());
             }else if(user instanceof Bibliotecario){
                 labelTipoUsuario.setText("Bibliotecário");
+                labelCursoDepartamentoLogin.setText("Login");
+                labelCDouL.setText(((Bibliotecario) user).getLogin());
             }
             labelUsuarioNome.setText(user.getNome());
             labelUsuarioCPF.setText(user.getCpf());

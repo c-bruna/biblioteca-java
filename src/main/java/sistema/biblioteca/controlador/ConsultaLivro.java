@@ -1,23 +1,13 @@
 package sistema.biblioteca.controlador;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
 import sistema.biblioteca.controlador.projeto2ivis.model.*;
 import sistema.biblioteca.controlador.projeto2ivis.controller.ControlleLivros;
-
 import java.io.IOException;
-import java.security.PrivateKey;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class ConsultaLivro {
 

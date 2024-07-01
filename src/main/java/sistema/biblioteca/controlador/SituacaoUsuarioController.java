@@ -1,21 +1,14 @@
 package sistema.biblioteca.controlador;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
 import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
-import sistema.biblioteca.controlador.projeto2ivis.model.BancoDAO;
 import sistema.biblioteca.controlador.projeto2ivis.model.*;
 
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 public class SituacaoUsuarioController {
 

@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.Objects;
 
 public class App extends Application {
 
