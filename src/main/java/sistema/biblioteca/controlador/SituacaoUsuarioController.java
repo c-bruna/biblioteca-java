@@ -41,6 +41,9 @@ public class SituacaoUsuarioController {
     private Label labelUsuarioQtdEmprestimos;
 
     @FXML
+    private Label lbUsuarioInvalido;
+
+    @FXML
     BibliotecaController biblioteca = new BibliotecaController();
 
     @FXML
@@ -58,6 +61,7 @@ public class SituacaoUsuarioController {
         String cpf = cpfTextField.getText();
         Usuario user = biblioteca.buscarUsuarioPorCpf(cpf);
         if (user != null) {
+            lbUsuarioInvalido.setText("");
             if (user instanceof Estudantes) {
                 labelTipoUsuario.setText("Estudante");
             } else if (user instanceof Professores) {
@@ -71,6 +75,7 @@ public class SituacaoUsuarioController {
             labelUsuarioDataNascimento.setText(user.getDadaNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
             labelUsuarioQtdEmprestimos.setText(String.valueOf(user.getQtdEmprestimosAtivos()));
         } else {
+            lbUsuarioInvalido.setText("Usuário não encontrado");
             labelTipoUsuario.setText("");
             labelUsuarioNome.setText("");
             labelUsuarioCPF.setText("");

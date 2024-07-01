@@ -3,6 +3,7 @@ package sistema.biblioteca.controlador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
 import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
@@ -20,6 +21,15 @@ public class DevolverEmprestimoController {
     @FXML
     private TextField tituloTextField;
 
+    @FXML
+    private Label lbAvisoCamposVazios;
+
+    @FXML
+    private Label lbDevolverValido;
+
+    @FXML
+    private Label lbDevolverInvalido;
+
 
     private BibliotecaController controleEmprestimos;
 
@@ -34,7 +44,7 @@ public class DevolverEmprestimoController {
         String titulo = tituloTextField.getText();
 
         if (cpfUsuario.isEmpty() || titulo.isEmpty()) {
-            System.out.println("Por favor, preencha todos os campos.");
+            lbAvisoCamposVazios.setText("Por favor, preencha todos os campos.");
             return;
         }
 
@@ -44,11 +54,11 @@ public class DevolverEmprestimoController {
         boolean sucesso = controleEmprestimos.devolverEmprestimoLivro(user.getCpf(), lv.getTitulo());
 
         if (sucesso) {
-            System.out.println("Empréstimo devolvido com sucesso!");
+            lbDevolverValido.setText("Empréstimo devolvido com sucesso!");
             cpfUsuarioTextField.clear();
             tituloTextField.clear();
         } else {
-            System.out.println("Erro ao devolver empréstimo. Verifique se os dados estão corretos.");
+            lbDevolverInvalido.setText("Erro ao devolver empréstimo. Verifique se os dados estão corretos.");
         }
     }
 

@@ -2,6 +2,7 @@ package sistema.biblioteca.controlador;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
 import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
@@ -19,6 +20,16 @@ public class EmprestimoController {
     @FXML
     private TextField cpfUsuarioTextField;
 
+    @FXML
+    private Label labelAvisoCamposVazios;
+
+    @FXML
+    private Label lbCadastroValido;
+
+    @FXML
+    private Label lbCadastroInvalido;
+
+
     private BibliotecaController controlleEmprestimo;
 
 
@@ -31,7 +42,7 @@ public class EmprestimoController {
         String cpfUsuario = cpfUsuarioTextField.getText();
 
         if(tituloLivro.isEmpty() || cpfUsuario.isEmpty()){
-            System.out.println("Por favor, preencha todos os campos.");
+            labelAvisoCamposVazios.setText("Por favor, preencha todos os campos.");
             return;
         }
 
@@ -41,11 +52,11 @@ public class EmprestimoController {
         boolean sucesso = controlleEmprestimo.adicionarEmprestimoLivro(user.getCpf(),lv.getTitulo());
 
         if (sucesso) {
-            System.out.println("Empréstimo cadastrado com sucesso!");
+            lbCadastroValido.setText("Empréstimo cadastrado com sucesso!");
             limparCampos();
             controlleEmprestimo.salvarEstadoBiblioteca();
         } else {
-            System.out.println("Erro ao cadastrar empréstimo. Verifique se o livro e usuários estão cadastrados.");
+            lbCadastroInvalido.setText("Erro ao cadastrar empréstimo. Verifique se o livro e usuários estão cadastrados.");
         }
 
     }

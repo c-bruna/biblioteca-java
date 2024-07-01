@@ -40,6 +40,9 @@ public class ConsultaLivro {
     private Label labelUsuarioQtdEmEstoque;
 
     @FXML
+    private Label lbLivroInvalido;
+
+    @FXML
     private void trocarTelaMenu() throws IOException {
         App.trocarLayout("menu.fxml");
     }
@@ -50,12 +53,14 @@ public class ConsultaLivro {
         Livro lv = ControlleLivros.buscarLivroPorTitulo(nomeLivro);
 
         if(lv != null) {
+            lbLivroInvalido.setText("");
             labelLivroTitulo.setText(lv.getTitulo());
             labelLivroAutor.setText(lv.getAutor());
             labelLivroCategoria.setText(lv.getAssunto());
             labelLivroAno.setText(String.valueOf(lv.getAnoLancamento()));
             labelUsuarioQtdEmEstoque.setText(String.valueOf(lv.getQtdEstoque()));
         }else{
+            lbLivroInvalido.setText("Livro não encontrado");
             labelLivroTitulo.setText("");
             labelLivroAutor.setText("");
             labelLivroCategoria.setText("");

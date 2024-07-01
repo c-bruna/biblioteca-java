@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
 import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
@@ -36,15 +37,20 @@ public class UsuarioController {
     @FXML
     private TextField senhaTextField;
 
+    @FXML
+    private Label labelAvisoCamposVazios;
+
+    @FXML
+    private Label lbCadastroValido;
+
+    @FXML
+    private Label lbCadastroInvalido;
+
+
     private BibliotecaController controlleUsuarios;
 
     public UsuarioController() {
         controlleUsuarios = new BibliotecaController();
-    }
-
-    @FXML
-    private void initialize() {
-        // Inicialização, se necessário
     }
 
     @FXML
@@ -56,18 +62,18 @@ public class UsuarioController {
         String curso = cursoOUdeparmanetoTextField.getText();
 
         if (nome.isEmpty() || cpf.isEmpty() || matricula.isEmpty() || dataNascimento == null || curso.isEmpty()) {
-            System.out.println("Por favor, preencha todos os campos.");
+            labelAvisoCamposVazios.setText("Por favor, preencha todos os campos.");
             return;
         }
 
         boolean sucesso = controlleUsuarios.adicionarEstudante(nome, cpf, matricula, dataNascimento, curso);
 
         if (sucesso) {
-            System.out.println("Estudante cadastrado com sucesso!");
+            lbCadastroValido.setText("Estudante cadastrado com sucesso!");
             limparCamposEstudanteProfessor();
             controlleUsuarios.salvarEstadoBiblioteca();
         } else {
-            System.out.println("Erro ao cadastrar estudante. Verifique se o CPF já está cadastrado.");
+            lbCadastroInvalido.setText("Erro ao cadastrar estudante. Verifique se o CPF já está cadastrado.");
         }
     }
 
@@ -80,18 +86,18 @@ public class UsuarioController {
         String departamento = cursoOUdeparmanetoTextField.getText(); // Campo 'cursoTextField' será utilizado para departamento dos professores
 
         if (nome.isEmpty() || cpf.isEmpty() || matricula.isEmpty() || dataNascimento == null || departamento.isEmpty()) {
-            System.out.println("Por favor, preencha todos os campos.");
+            labelAvisoCamposVazios.setText("Por favor, preencha todos os campos.");
             return;
         }
 
         boolean sucesso = controlleUsuarios.adicionarProfessor(nome, cpf, matricula, dataNascimento, departamento);
 
         if (sucesso) {
-            System.out.println("Professor cadastrado com sucesso!");
+            lbCadastroValido.setText("Professor cadastrado com sucesso!");
             limparCamposEstudanteProfessor();
             controlleUsuarios.salvarEstadoBiblioteca();
         } else {
-            System.out.println("Erro ao cadastrar professor. Verifique se o CPF já está cadastrado.");
+            lbCadastroInvalido.setText("Erro ao cadastrar professor. Verifique se o CPF já está cadastrado.");
         }
     }
 
@@ -104,24 +110,25 @@ public class UsuarioController {
         String login = loginTextField.getText();
         String senha = senhaTextField.getText();
 
+
         if (nome.isEmpty() || cpf.isEmpty() || matricula.isEmpty() || dataNascimento == null || login.isEmpty() || senha.isEmpty()) {
-            System.out.println("Por favor, preencha todos os campos.");
+            labelAvisoCamposVazios.setText("Por favor, preencha todos os campos.");
             return;
         }
 
         boolean sucesso = controlleUsuarios.adicionarBibliotecario(nome, cpf, matricula, dataNascimento, login, senha);
 
         if (sucesso) {
-            System.out.println("Bibliotecário cadastrado com sucesso!");
+            lbCadastroValido.setText("Bibliotecário cadastrado com sucesso!");
             limparCamposBibliotecario();
             controlleUsuarios.salvarEstadoBiblioteca();
         } else {
-            System.out.println("Erro ao cadastrar bibliotecário. Verifique se o CPF já está cadastrado.");
+            lbCadastroInvalido.setText("Erro ao cadastrar bibliotecário. Verifique se o CPF já está cadastrado.");
         }
     }
 
 
-
+    //SELECIONAR TIPO USUÁRIO
     @FXML
     private void trocarTelaMenu() throws IOException {
         App.trocarLayout("menu.fxml");

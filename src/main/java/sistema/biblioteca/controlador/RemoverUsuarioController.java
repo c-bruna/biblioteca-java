@@ -3,6 +3,7 @@ package sistema.biblioteca.controlador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
 import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
@@ -13,6 +14,16 @@ public class RemoverUsuarioController {
 
     @FXML
     private TextField cpfTextField;
+
+    @FXML
+    private Label lbAvisoCamposVazios;
+
+    @FXML
+    private Label lbRemoverValido;
+
+    @FXML
+    private Label lbRemoverInvalido;
+
 
     private BibliotecaController controleUsuarios;
 
@@ -30,17 +41,17 @@ public class RemoverUsuarioController {
         String cpf = cpfTextField.getText();
 
         if (cpf.isEmpty()) {
-            System.out.println("Por favor, preencha o campo CPF.");
+            lbAvisoCamposVazios.setText("Por favor, preencha o campo CPF.");
             return;
         }
 
         boolean sucesso = controleUsuarios.removerUsuario(cpf); // Corrigido: Passando a String cpf
 
         if (sucesso) {
-            System.out.println("Usuário removido com sucesso!");
+            lbRemoverValido.setText("Usuário removido com sucesso!");
             cpfTextField.clear();
         } else {
-            System.out.println("Erro ao remover usuário. Verifique se o CPF está correto.");
+            lbRemoverInvalido.setText("Erro ao remover usuário. Verifique se o CPF está correto.");
         }
     }
 
