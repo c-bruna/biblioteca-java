@@ -28,7 +28,7 @@ public class ControlleSerializacao {
      */
     public static void salvarUsuarios() {
         try {
-            FileOutputStream arqSerial = new FileOutputStream("Usuarios.bin");
+            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Usuarios.bin");
             ObjectOutputStream usuarios = new ObjectOutputStream(arqSerial);
             usuarios.writeObject(biblioteca.getUsuarios());
             usuarios.close();
@@ -43,9 +43,9 @@ public class ControlleSerializacao {
      * Carrega os dados dos usuários de um arquivo binário chamado Usuarios.bin.
      */
     public static void carregarUsuarios() {
-        File arquivo = new File("Usuarios.bin");
+        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Usuarios.bin");
         if(arquivo.exists()) {
-            try (FileInputStream arquivoEntrada = new FileInputStream("Usuarios.bin");
+            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Usuarios.bin");
                  ObjectInputStream entrada = new ObjectInputStream(arquivoEntrada)) {
 
                 ArrayList<Usuario> usuarios = (ArrayList<Usuario>) entrada.readObject();
@@ -67,7 +67,7 @@ public class ControlleSerializacao {
     public static void salvarLivros() {
 
         try {
-            FileOutputStream arqSerial = new FileOutputStream("Livros.bin");
+            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Livros.bin");
             ObjectOutputStream livros = new ObjectOutputStream(arqSerial);
             livros.writeObject(biblioteca.getLivros());
             livros.close();
@@ -82,9 +82,9 @@ public class ControlleSerializacao {
      * Carrega os dados dos livros de um arquivo binário chamado Livros.bin.
      */
     public static void carregarLivros() {
-        File arquivo = new File("Livros.bin");
+        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Livros.bin");
         if(arquivo.exists()) {
-            try (FileInputStream arquivoEntrada = new FileInputStream("Livros.bin");
+            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Livros.bin");
                  ObjectInputStream entrada = new ObjectInputStream(arquivoEntrada)) {
 
                 ArrayList<Livro> livros = (ArrayList<Livro>) entrada.readObject();
@@ -105,7 +105,7 @@ public class ControlleSerializacao {
      */
     public static void salvarEmprestimos() {
         try {
-            FileOutputStream arqSerial = new FileOutputStream("Emprestimos.bin");
+            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Emprestimos.bin");
             ObjectOutputStream emprestimos = new ObjectOutputStream(arqSerial);
             emprestimos.writeObject(biblioteca.getEmprestimos());
             emprestimos.close();
@@ -120,9 +120,9 @@ public class ControlleSerializacao {
      * Carrega os dados dos empréstimos de um arquivo binário chamado Emprestimos.bin.
      */
     public static void carregarEmprestimos() {
-        File arquivo = new File("Emprestimos.bin");
+        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Emprestimos.bin");
         if(arquivo.exists()) {
-            try (FileInputStream arquivoEntrada = new FileInputStream("Emprestimos.bin");
+            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Emprestimos.bin");
                  ObjectInputStream entrada = new ObjectInputStream(arquivoEntrada)) {
 
                 ArrayList<Emprestimo> emprestimos = (ArrayList<Emprestimo>) entrada.readObject();

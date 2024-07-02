@@ -29,7 +29,6 @@ public class App extends Application {
     public static void main(String[] args) {
         BibliotecaController biblioteca = new BibliotecaController();
         biblioteca.carregarDadosBiblioteca();
-        biblioteca.salvarEstadoBiblioteca();
         launch();
     }
 }
