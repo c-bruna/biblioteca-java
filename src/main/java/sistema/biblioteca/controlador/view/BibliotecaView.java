@@ -1,9 +1,11 @@
-package sistema.biblioteca.controlador.projeto2ivis.view;
+package sistema.biblioteca.controlador.view;
 
-import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
+import sistema.biblioteca.controlador.controller.BibliotecaController;
+import sistema.biblioteca.controlador.model.Livro;
+import sistema.biblioteca.controlador.model.Usuario;
+
 import java.time.LocalDate;
 import java.util.Scanner;
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
 
 public class BibliotecaView {
     private static final Scanner scanner = new Scanner(System.in);

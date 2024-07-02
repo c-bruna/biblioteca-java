@@ -1,9 +1,8 @@
-package sistema.biblioteca.controlador.projeto2ivis.controller;
+package sistema.biblioteca.controlador.controller;
 
 import java.time.LocalDate;
 import java.util.List;
-
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
+import sistema.biblioteca.controlador.model.*;
 
 /**
  * Classe BibliotecaController é responsável pela coordenação entre diferentes controladores dentro da aplicação de uma biblioteca,

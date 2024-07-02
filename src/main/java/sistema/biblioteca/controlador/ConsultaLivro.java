@@ -4,8 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
-import sistema.biblioteca.controlador.projeto2ivis.controller.ControlleLivros;
+import sistema.biblioteca.controlador.model.*;
+import sistema.biblioteca.controlador.controller.ControlleLivros;
 import java.io.IOException;
 
 

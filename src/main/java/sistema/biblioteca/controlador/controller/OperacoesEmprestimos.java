@@ -1,4 +1,4 @@
-package sistema.biblioteca.controlador.projeto2ivis.controller;
+package sistema.biblioteca.controlador.controller;
 
 public interface OperacoesEmprestimos {
     //MÉTODOS EMPRÉSTIMOS

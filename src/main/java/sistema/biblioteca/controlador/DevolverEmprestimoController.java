@@ -6,10 +6,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
-import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
-import sistema.biblioteca.controlador.projeto2ivis.controller.ControlleLivros;
-import sistema.biblioteca.controlador.projeto2ivis.controller.ControlleUsuarios;
+import sistema.biblioteca.controlador.controller.BibliotecaController;
+import sistema.biblioteca.controlador.model.*;
+import sistema.biblioteca.controlador.controller.ControlleLivros;
+import sistema.biblioteca.controlador.controller.ControlleUsuarios;
 
 import java.io.IOException;
 

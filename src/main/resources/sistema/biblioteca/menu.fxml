@@ -73,6 +73,11 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Button>
+                  <Button mnemonicParsing="false" onAction="#encerrarPrograma" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #d16848; -fx-cursor: hand;" text="Encerrar" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="80.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="213.0">

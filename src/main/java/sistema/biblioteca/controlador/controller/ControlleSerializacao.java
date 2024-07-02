@@ -1,8 +1,8 @@
-package sistema.biblioteca.controlador.projeto2ivis.controller;
+package sistema.biblioteca.controlador.controller;
 
 import java.io.*;
 import java.util.ArrayList;
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
+import sistema.biblioteca.controlador.model.*;
 
 /**
  * Classe ControlleSerializacao é responsável por gerenciar a serialização e deserialização de dados da biblioteca,
@@ -28,7 +28,7 @@ public class ControlleSerializacao {
      */
     public static void salvarUsuarios() {
         try {
-            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Usuarios.bin");
+            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/bin/Usuarios.bin");
             ObjectOutputStream usuarios = new ObjectOutputStream(arqSerial);
             usuarios.writeObject(biblioteca.getUsuarios());
             usuarios.close();
@@ -43,13 +43,11 @@ public class ControlleSerializacao {
      * Carrega os dados dos usuários de um arquivo binário chamado Usuarios.bin.
      */
     public static void carregarUsuarios() {
-        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Usuarios.bin");
+        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/bin/Usuarios.bin");
         if(arquivo.exists()) {
-            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Usuarios.bin");
+            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/bin/Usuarios.bin");
                  ObjectInputStream entrada = new ObjectInputStream(arquivoEntrada)) {
-
-                ArrayList<Usuario> usuarios = (ArrayList<Usuario>) entrada.readObject();
-                BancoDAO.getInstance().setUsuarios(usuarios);
+                BancoDAO.getInstance().setUsuarios((ArrayList<Usuario>) entrada.readObject());
 
             } catch (FileNotFoundException e) {
                 System.out.println("Arquivo de usuarios nao encontrado.");
@@ -67,7 +65,7 @@ public class ControlleSerializacao {
     public static void salvarLivros() {
 
         try {
-            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Livros.bin");
+            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/bin/Livros.bin");
             ObjectOutputStream livros = new ObjectOutputStream(arqSerial);
             livros.writeObject(biblioteca.getLivros());
             livros.close();
@@ -82,13 +80,11 @@ public class ControlleSerializacao {
      * Carrega os dados dos livros de um arquivo binário chamado Livros.bin.
      */
     public static void carregarLivros() {
-        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Livros.bin");
+        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/bin/Livros.bin");
         if(arquivo.exists()) {
-            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Livros.bin");
+            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/bin/Livros.bin");
                  ObjectInputStream entrada = new ObjectInputStream(arquivoEntrada)) {
-
-                ArrayList<Livro> livros = (ArrayList<Livro>) entrada.readObject();
-                BancoDAO.getInstance().setLivros(livros);
+                BancoDAO.getInstance().setLivros((ArrayList<Livro>) entrada.readObject());
 
             } catch (FileNotFoundException e) {
                 System.out.println("Arquivo de livros nao encontrado.");
@@ -105,7 +101,7 @@ public class ControlleSerializacao {
      */
     public static void salvarEmprestimos() {
         try {
-            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Emprestimos.bin");
+            FileOutputStream arqSerial = new FileOutputStream("src/main/java/sistema/biblioteca/controlador/bin/Emprestimos.bin");
             ObjectOutputStream emprestimos = new ObjectOutputStream(arqSerial);
             emprestimos.writeObject(biblioteca.getEmprestimos());
             emprestimos.close();
@@ -113,20 +109,17 @@ public class ControlleSerializacao {
         } catch (IOException e) {
             System.out.println("Erro ao salvar emprestimos: " + e.getMessage());
         }
-
     }
 
     /**
      * Carrega os dados dos empréstimos de um arquivo binário chamado Emprestimos.bin.
      */
     public static void carregarEmprestimos() {
-        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Emprestimos.bin");
+        File arquivo = new File("src/main/java/sistema/biblioteca/controlador/bin/Emprestimos.bin");
         if(arquivo.exists()) {
-            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/projeto2ivis/bin/Emprestimos.bin");
+            try (FileInputStream arquivoEntrada = new FileInputStream("src/main/java/sistema/biblioteca/controlador/bin/Emprestimos.bin");
                  ObjectInputStream entrada = new ObjectInputStream(arquivoEntrada)) {
-
-                ArrayList<Emprestimo> emprestimos = (ArrayList<Emprestimo>) entrada.readObject();
-                BancoDAO.getInstance().setEmprestimos(emprestimos);
+                BancoDAO.getInstance().setEmprestimos((ArrayList<Emprestimo>) entrada.readObject());
 
             } catch (FileNotFoundException e) {
                 System.out.println("Arquivo de emprestimos não encontrado.");

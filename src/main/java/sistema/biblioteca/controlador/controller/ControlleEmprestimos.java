@@ -1,8 +1,7 @@
-package sistema.biblioteca.controlador.projeto2ivis.controller;
-
+package sistema.biblioteca.controlador.controller;
 import java.time.LocalDate;
 import java.util.NoSuchElementException;
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
+import sistema.biblioteca.controlador.model.*;
 
 /**
  * Classe ControlleEmprestimos implementa a interface OperacoesEmprestimos para gerenciar as operações de empréstimos de livros na biblioteca.

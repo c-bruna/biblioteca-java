@@ -4,8 +4,8 @@ import java.io.IOException;
 import javafx.scene.control.*;
 import sistema.biblioteca.App;
 import javafx.fxml.FXML;
-import sistema.biblioteca.controlador.projeto2ivis.model.BancoDAO;
-import sistema.biblioteca.controlador.projeto2ivis.model.Bibliotecario;
+import sistema.biblioteca.controlador.model.BancoDAO;
+import sistema.biblioteca.controlador.model.Bibliotecario;
 import javafx.scene.control.Label;
 
 public class LoginController {

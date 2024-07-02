@@ -8,9 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import sistema.biblioteca.App;
-import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
-import sistema.biblioteca.controlador.projeto2ivis.model.BancoDAO;
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
+import sistema.biblioteca.controlador.controller.BibliotecaController;
+import sistema.biblioteca.controlador.model.BancoDAO;
+import sistema.biblioteca.controlador.model.*;
 
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;

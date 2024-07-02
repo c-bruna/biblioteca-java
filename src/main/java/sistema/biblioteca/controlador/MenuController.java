@@ -4,10 +4,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import sistema.biblioteca.App;
+import sistema.biblioteca.controlador.controller.BibliotecaController;
 
 import java.io.IOException;
 
 public class MenuController {
+
+    BibliotecaController biblioteca = new BibliotecaController();
 
     @FXML
     private void trocarTelaAdicionarUsuario() throws IOException {
@@ -67,6 +70,12 @@ public class MenuController {
     @FXML
     private void trocarTelaMenu() throws IOException {
         App.trocarLayout("menu.fxml");
+    }
+
+    @FXML
+    private void encerrarPrograma() {
+        biblioteca.salvarEstadoBiblioteca();
+        System.exit(0);
     }
 
     }

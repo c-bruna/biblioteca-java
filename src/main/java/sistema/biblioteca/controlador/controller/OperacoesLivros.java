@@ -1,6 +1,5 @@
-package sistema.biblioteca.controlador.projeto2ivis.controller;
-
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
+package sistema.biblioteca.controlador.controller;
+import sistema.biblioteca.controlador.model.*;
 
 public interface OperacoesLivros {
     //MÉTODOS DOS LIVROS

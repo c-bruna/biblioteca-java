@@ -5,11 +5,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sistema.biblioteca.App;
-import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
+import sistema.biblioteca.controlador.controller.BibliotecaController;
 import java.io.IOException;
-import sistema.biblioteca.controlador.projeto2ivis.controller.BibliotecaController;
-import sistema.biblioteca.controlador.projeto2ivis.model.BancoDAO;
-import sistema.biblioteca.controlador.projeto2ivis.model.*;
+import sistema.biblioteca.controlador.controller.BibliotecaController;
+import sistema.biblioteca.controlador.model.BancoDAO;
+import sistema.biblioteca.controlador.model.*;
 
 public class LivrosController {
 

@@ -1,5 +1,4 @@
-package sistema.biblioteca.controlador.projeto2ivis.model;
-
+package sistema.biblioteca.controlador.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
